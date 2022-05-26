@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Tree/Building
   - SceneChange
+  - Points
   layers:
   - Default
   - TransparentFX

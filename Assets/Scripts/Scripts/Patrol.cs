@@ -21,6 +21,7 @@ public class Patrol : MonoBehaviour
 
 
         agent.SetDestination(lstPoints[indexSorteado].transform.position);
+        
 
         for (int x = 0; x < lstPoints.Count; x++)
         {
@@ -48,9 +49,11 @@ public class Patrol : MonoBehaviour
     }
     private void Pursuit()
     {
+
         animator.SetFloat("Speed", agent.velocity.magnitude);
         agent.SetDestination(player.position);
         ispursuing = true;
+        
     }
 
     private void OnTriggerEnter(Collider other)

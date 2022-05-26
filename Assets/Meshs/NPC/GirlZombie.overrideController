@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GirlZombie
+  m_Controller: {fileID: 9100000, guid: 7f2b67421ed63f546a9b5be167b34731, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: -203655887218126122, guid: 886a54f30fb69544185e641aa92577cb, type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 7cd6a480fb9847c40926be6fa77246a9, type: 3}
