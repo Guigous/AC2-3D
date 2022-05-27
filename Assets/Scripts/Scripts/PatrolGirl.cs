@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PatrolGirl : MonoBehaviour
+public class Patrol : MonoBehaviour
 {
     public Transform player;
     public float mindist = 2f;
@@ -11,16 +11,15 @@ public class PatrolGirl : MonoBehaviour
     NavMeshAgent agent;
     Animator animator;
     public bool ispursuing = false;
-    public int indexSorteado;
 
-
+    int indexSorteado = 0;
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
 
-        int indexSorteado = Random.Range(0,lstPoints.Count );
+
         agent.SetDestination(lstPoints[indexSorteado].transform.position);
         
 
@@ -59,6 +58,7 @@ public class PatrolGirl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         
         if (other.CompareTag("Points"))
         {
@@ -68,7 +68,7 @@ public class PatrolGirl : MonoBehaviour
                 indexSorteado++;
                 if (indexSorteado >= lstPoints.Count)
                 {
-                    indexSorteado = 0;
+                    indexSorteado = Random.Range(0, lstPoints.Count);
                 }
                 agent.SetDestination(lstPoints[indexSorteado].transform.position);
                 
